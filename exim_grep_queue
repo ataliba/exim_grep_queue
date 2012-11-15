@@ -16,7 +16,7 @@ import commands
 import optparse
 
 # Change this for your path of Exiqgrep 
-Exiqgrep=/usr/sbin/exiqgrep
+Exiqgrep="/usr/sbin/exiqgrep"
  
 ########################
 #command line options processing 

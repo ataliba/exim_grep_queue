@@ -31,6 +31,17 @@ To use this plugin you need to put a line like this on your nrpe.cfg:
 
 command[check_string]=/usr/local/bin/exim_grep_queue -w 5 -c 30 -S string.com.br
 
+On the source code of the script change this line to your path of exiqgrep : 
+
+# Change this for your path of Exiqgrep 
+Exiqgrep=/usr/sbin/exiqgrep
+
+And on your suoders file put a line like this ( using the same path you put on the source code ) : 
+
+%nagios ALL=(ALL)   NOPASSWD:/usr/sbin/exiqgrep
+
+If your nrpe runs on another group, change the %nagios option. 
+
 And on your nagios configure a service to get this information of this instance on 
 nrpe. 
 

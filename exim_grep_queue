@@ -1,9 +1,23 @@
-#!/usr/bin/python
+#!/bin/env python 
+# exim_grep_queue
+#
+# INFORMATION   : 
+# DATE OF BIRTH : 14 NOVEMBER 2012 
+# AUTHOR:       : Ataliba de Oliveira Teixeira < ataliba@taliba.eti.br > 
+# DESCRIPTION   : Simple plugin to search for specific strings on exim queue 
+# LICENSE       : GPLv2
+# CHANGELOG     : https://github.com/ataliba/exim_grep_queue
+# VERSION       : v1.1 
+
+
 import re
 import sys
 import commands
 import optparse
 
+# Change this for your path of Exiqgrep 
+Exiqgrep=/usr/sbin/exiqgrep
+ 
 ########################
 #command line options processing 
 #######################
@@ -19,7 +33,7 @@ options, args = parser.parse_args()
 critical = options.c
 warning = options.w
 
-command = "/usr/bin/sudo /usr/sbin/exiqgrep -ir " + options.S + "  | wc -l"
+command = "/usr/bin/sudo " + Exiqgrep + "  -ir " + options.S + "  | wc -l"
 
 #################
 

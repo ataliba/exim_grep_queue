@@ -45,7 +45,7 @@ If your nrpe runs on another group, change the %nagios option.
 And on your nagios configure a service to get this information of this instance on 
 nrpe. 
 
-If you have a doubt about the use of this script go to this page  ( http://cerebro.freeshell.org ) or 
+If you have a doubt about the use of this script go to this page  ( http://cerebro.freeshell.org/log/plugin-for-nagios-exim_grep_queue/ ) or 
 open a request here on github. 
 
 
